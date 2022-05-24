@@ -1,20 +1,23 @@
 {
     "servicos": [ 
         {
-            "nome": "Banho e Tosa",
+            "id": 1,
+            "nome": "Banho e Tosa Especial",
             "preco": "R$ 50,00",
             "ativo": false,
             "imagem": "https://1.bp.blogspot.com/-Wq2lcq9_a4I/Tc2lLWOkNVI/AAAAAAAABVM/Wao0rm-vWe4/s1600/gatinho-5755.jpg",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat."
         },
         {
-            "nome": "Consulta veterinária",
+            "id": 2,
+            "nome": "Consulta veterinária Especial",
             "preco": "R$ 250,00",
             "ativo": true,
             "imagem": "https://guiaanimal.net/uploads/content/image/38084/AdobeStock_163556483.jpeg",
             "descricao": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat."
         },
         {
+            "id": 3,
             "nome": "Vacinação",
             "preco": "R$ 120,00",
             "ativo": true,
