@@ -39,9 +39,11 @@
                                 <td><%= servico.preco %></td>
                                 <td><%= servico.ativo ? "Habilitado" : "Desabilitado" %></td>
                                 <td>
-                                    <button type="button" class="btn btn-secondary">Editar</button>
-                                    <button type="button" class="btn btn-danger">Excluir</button>
-
+                                    <a href="/adm/servicos/<%= servico.id %>" type="button" class="btn btn-primary">Abrir</a>
+                                    <a href="/adm/servicos/<%= servico.id %>/editar" type="button" class="btn btn-secondary">Editar</a>
+                                    <form action="/adm/servicos/<%= servico.id %>?_method=DELETE" method="POST">
+                                        <button type="submit" class="btn btn-danger">Excluir</button>
+                                    </form>
                                 </td>
                             </tr>
                         <% }) %> 

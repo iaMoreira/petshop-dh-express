@@ -27,7 +27,7 @@ const Servico = {
     },
     save: (servico) => {
         const db = open();
-        sevico.id = geradorDeId(); // gerando um id para meu novo serviço
+        servico.id = geradorDeId(); // gerando um id para meu novo serviço
         db.servicos.push(servico);
         store(db);
     },

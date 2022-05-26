@@ -17,28 +17,30 @@
     <main>
         <section class="servicos-lista">
             <div class="container">
-                <h1>Cadastro de serviços</h1>
+                <h1>Atualização de serviços</h1>
+
                 <a href="/adm/servicos" class="btn btn-primary mb-2" >Lista de serviços</a>
-                <form method="POST" action="/adm/servicos" >
+
+                <form method="POST" action="/adm/servicos/<%= servico.id %>?_method=PUT" >
                     <div class="mb-3">
                       <label for="" class="form-label">Imagem</label>
-                      <input type="file" name="imagem" id="imagem" class="form-control" id="">
+                      <input type="text" name="imagem" value="<%= servico.imagem %>" class="form-control" >
                     </div>
                     <div class="mb-3">
                       <label for="" class="form-label">Nome</label>
-                      <input type="text" name="nome" id="nome" class="form-control" id="">
+                      <input type="text" name="nome" value="<%= servico.nome %>" class="form-control" >
                     </div>
                     <div class="mb-3">
-                      <label for="" class="form-label">Preço</label>
-                      <input type="number" name="preco" class="form-control" id="" >
+                      <label for="" class="form-label">Preço </label>
+                      <input type="number" name="preco" value="<%= servico.preco %>" class="form-control"  >
                     </div>
                     <div class="mb-3 form-check">
-                      <input name="ativo" type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <input name="ativo" type="checkbox" <%= servico.ativo ? 'checked' : '' %> class="form-check-input" id="exampleCheck1">
                       <label class="form-check-label" name="ativo" for="exampleCheck1">Ativo</label>
                     </div>
 
                     <div class="mb-3">
-                        <textarea name="descricao" id="" class="form-control" cols="30" rows="10" placeholder="Descrição do serviço"></textarea>
+                        <textarea name="descricao" class="form-control" cols="30" rows="10" placeholder="Descrição do serviço"><%= servico.descricao %></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Salvar</button>
