@@ -18,7 +18,7 @@ app.use(petsRouter);
 app.use(servicosRouter);
 
 app.use((req, res, next) => {
-    res.status(404).render('not-found', {error: 'Página não encontrada'});
+    return res.status(404).render('not-found', { error: 'Página não encontrada' });
 })
   
 
